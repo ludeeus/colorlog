@@ -3,7 +3,7 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A simple component to format log output with colors.",
   "keywords": [
     "log",
@@ -25,11 +25,11 @@
   "author": "Joakim Sørensen <hi@ludeeus.dev>",
   "license": "MIT",
   "dependencies": {
-    "lit-element": "2.2.1"
+    "lit-element": "^2.2.1"
   },
   "devDependencies": {
-    "rollup": "1.20.1",
-    "rollup-plugin-dev": "1.1.1",
+    "rollup": "^1.20.1",
+    "rollup-plugin-dev": "^1.1.1",
     "rollup-plugin-terser": "^5.2.0",
     "rollup-plugin-minify-html-literals": "^1.2.2",
     "rollup-plugin-node-resolve": "5.2.0"

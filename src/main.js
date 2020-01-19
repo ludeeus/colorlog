@@ -20,15 +20,15 @@ class ColorLog extends LitElement {
           )
             ? "logline "
             : "";
-          classnames += logline.includes("ERROR" || "[error]")
+          classnames += logline.includes(" ERROR ")
             ? "error"
-            : logline.includes(" INFO " || "[info]")
+            : logline.includes(" INFO ")
             ? "info"
-            : logline.includes(" WARNING " || " [warning] ")
+            : logline.includes(" WARNING ")
             ? "warning"
-            : logline.includes(" DEBUG " || " [debug] ")
+            : logline.includes(" DEBUG ")
             ? "debug"
-            : logline.includes(" CRITICAL " || " [critical] ")
+            : logline.includes(" CRITICAL ")
             ? "critical"
             : "";
 

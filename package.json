@@ -3,7 +3,7 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "A simple component to format log output with colors.",
   "keywords": [
     "log",

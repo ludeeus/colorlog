@@ -11,7 +11,7 @@ class ColorLog extends LitElement {
     if (!this.log) return html``;
     return html`
       <div class="container">
-        ${this.log.split("\n").map(logline => {
+        ${this.log.split(/\r?\n/).map(logline => {
           if (logline.length === 0) {
             return;
           }

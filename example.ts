@@ -12,7 +12,7 @@ AttributeError: 'NoneType' object has no attribute 'get'
 2020-01-18 20:54:23 CRITICAL (MainThread) [app] Application terminated
     `;
     return html`
-      <color-log .log=${logs}><color-log></color-log></color-log>
+      <color-log .log=${logs}></color-log>
     `;
   }
 }

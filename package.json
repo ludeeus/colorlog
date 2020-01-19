@@ -1,0 +1,42 @@
+{
+  "name": "@ludeeus/colorlog",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "version": "0.1.0",
+  "description": "A simple component to format log output with colors.",
+  "keywords": [
+    "log",
+    "format",
+    "color",
+    "webcomponent",
+    "litElement"
+  ],
+  "main": "colorlog.js",
+  "module": "src/main.js",
+  "files": [
+    "colorlog.js",
+    "src/main.js"
+  ],
+  "repository": {
+    "url": "git@github.com:ludeeus/colorlog.git",
+    "type": "git"
+  },
+  "author": "Joakim Sørensen <hi@ludeeus.dev>",
+  "license": "MIT",
+  "dependencies": {
+    "lit-element": "2.2.1"
+  },
+  "devDependencies": {
+    "rollup": "1.20.1",
+    "rollup-plugin-dev": "1.1.1",
+    "rollup-plugin-terser": "^5.2.0",
+    "rollup-plugin-minify-html-literals": "^1.2.2",
+    "rollup-plugin-node-resolve": "5.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "start": "rollup -c --watch",
+    "build": "rollup -c"
+  }
+}

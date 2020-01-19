@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>@ludeeus/colorlog demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+    <!--<script src="https://unpkg.com/@ludeeus/colorlog" type="module"></script>-->
+    <script src="./colorlog.js" type="module"></script>
+  </head>
+  <style>
+    .demo {
+      padding: 16px;
+      margin: 24px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .demo1 {
+      background-color: black;
+      color: white;
+      --colorlog-text: white;
+    }
+    .demo2 {
+      background-color: white;
+      color: black;
+      --colorlog-text: black;
+    }
+    .demo3 {
+      background-color: black;
+      color: pink;
+      --colorlog-text: pink;
+      --colorlog-info: pink;
+      --colorlog-warning: pink;
+      --colorlog-error: pink;
+      --colorlog-critical: pink;
+      --colorlog-debug: pink;
+    }
+    .title {
+      margin-top: 4px;
+    }
+  </style>
+
+  <div class="demo">
+    <h2 class="title">Colorlog demo input:</h2>
+    <pre>
+2020-01-18 20:54:23 DEBUG (MainThread) [app] Initializing
+2020-01-18 20:54:23 INFO (MainThread) [app] Setting app
+AttributeError: 'NoneType' object has no attribute 'get'
+2020-01-18 20:54:23 WARNING (MainThread) [app] Something looks off
+2020-01-18 20:54:23 ERROR (MainThread) [app] Got into trouble
+2020-01-18 20:54:23 CRITICAL (MainThread) [app] Application terminated
+    </pre>
+  </div>
+
+  <body style="margin-left: 24px">
+    <div class="demo demo1">
+      <h2 class="title">Colorlog demo output:</h2>
+      <color-log
+        log="
+2020-01-18 20:54:23 DEBUG (MainThread) [app] Initializing
+2020-01-18 20:54:23 INFO (MainThread) [app] Setting app
+AttributeError: 'NoneType' object has no attribute 'get'
+2020-01-18 20:54:23 WARNING (MainThread) [app] Something looks off
+2020-01-18 20:54:23 ERROR (MainThread) [app] Got into trouble
+2020-01-18 20:54:23 CRITICAL (MainThread) [app] Application terminated
+      "
+      ></color-log>
+    </div>
+
+    <div class="demo demo2">
+      <h2 class="title">Colorlog demo output:</h2>
+      <color-log
+        log="
+2020-01-18 20:54:23 DEBUG (MainThread) [app] Initializing
+2020-01-18 20:54:23 INFO (MainThread) [app] Setting app
+AttributeError: 'NoneType' object has no attribute 'get'
+2020-01-18 20:54:23 WARNING (MainThread) [app] Something looks off
+2020-01-18 20:54:23 ERROR (MainThread) [app] Got into trouble
+2020-01-18 20:54:23 CRITICAL (MainThread) [app] Application terminated
+      "
+      ></color-log>
+    </div>
+
+    <div class="demo demo3">
+      <h2 class="title">Colorlog demo output:</h2>
+      <color-log
+        log="
+2020-01-18 20:54:23 DEBUG (MainThread) [app] Initializing
+2020-01-18 20:54:23 INFO (MainThread) [app] Setting app
+AttributeError: 'NoneType' object has no attribute 'get'
+2020-01-18 20:54:23 WARNING (MainThread) [app] Something looks off
+2020-01-18 20:54:23 ERROR (MainThread) [app] Got into trouble
+2020-01-18 20:54:23 CRITICAL (MainThread) [app] Application terminated
+      "
+      ></color-log>
+    </div>
+  </body>
+</html>

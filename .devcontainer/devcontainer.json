@@ -1,0 +1,26 @@
+// See https://aka.ms/vscode-remote/devcontainer.json for format details.
+{
+  "name": "Colorlog Development",
+  "dockerFile": "Dockerfile",
+  "context": "..",
+  "appPort": 5000,
+  "postCreateCommand": "npm install",
+  "extensions": [
+    "github.vscode-pull-request-github",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "bierner.lit-html",
+    "runem.lit-plugin",
+    "auchenberg.vscode-browser-preview",
+    "davidanson.vscode-markdownlint"
+  ],
+  "settings": {
+    "files.eol": "\n",
+    "editor.tabSize": 2,
+    "terminal.integrated.shell.linux": "/bin/bash",
+    "editor.formatOnPaste": false,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "files.trimTrailingWhitespace": true
+  }
+}

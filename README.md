@@ -1,5 +1,7 @@
 # Colorlog
 
+[![npm](https://img.shields.io/npm/v/@ludeeus/colorlog?style=flat-square)](https://www.npmjs.com/package/@ludeeus/colorlog)
+
 A simple component to format log output with colors.
 
 Currently only output from pythons `logging` package is supported.

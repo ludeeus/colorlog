@@ -1,6 +1,6 @@
 import { html, css, LitElement } from "lit-element";
 
-export class ColorLog extends LitElement {
+class ColorLog extends LitElement {
   static get properties() {
     return {
       log: { type: String }

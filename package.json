@@ -3,7 +3,7 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "A simple component to format log output with colors.",
   "keywords": [
     "log",
@@ -29,10 +29,11 @@
   },
   "devDependencies": {
     "rollup": "^1.32.1",
+    "rollup-plugin-cleanup": "^3.1.1",
     "rollup-plugin-dev": "^1.1.1",
-    "rollup-plugin-terser": "^5.3.0",
     "rollup-plugin-minify-html-literals": "^1.2.3",
-    "rollup-plugin-node-resolve": "5.2.0"
+    "rollup-plugin-node-resolve": "5.2.0",
+    "rollup-plugin-terser": "^5.3.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 0",

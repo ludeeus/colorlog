@@ -52,7 +52,7 @@ AttributeError: 'NoneType' object has no attribute 'get'
     </pre>
   </div>
 
-  <body style="margin-left: 24px">
+  <body style="margin-left: 24px;">
     <div class="demo demo1">
       <h2 class="title">Colorlog demo output:</h2>
       <color-log
@@ -91,6 +91,19 @@ AttributeError: 'NoneType' object has no attribute 'get'
 2020-01-18 20:54:23 WARNING (MainThread) [app] Something looks off
 2020-01-18 20:54:23 ERROR (MainThread) [app] Got into trouble
 2020-01-18 20:54:23 CRITICAL (MainThread) [app] Application terminated
+      "
+      ></color-log>
+    </div>
+
+    <div class="demo demo4">
+      <h2 class="title">Colorlog demo output:</h2>
+      <color-log
+        log="
+ D: (MainThread) [app] Initializing
+ I: (MainThread) [app] Setting app
+ W: (MainThread) [app] Something looks off
+ E: (MainThread) [app] Got into trouble
+ C: (MainThread) [app] Application terminated
       "
       ></color-log>
     </div>

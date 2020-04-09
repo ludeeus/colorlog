@@ -3,7 +3,7 @@ import { html, css, LitElement } from "lit-element";
 class ColorLog extends LitElement {
   static get properties() {
     return {
-      log: { type: String }
+      log: { type: String },
     };
   }
 
@@ -11,30 +11,23 @@ class ColorLog extends LitElement {
     if (!this.log) return html``;
     return html`
       <div class="container">
-        ${this.log.split(/\r?\n/).map(logline => {
-          if (logline.length === 0) {
-            return;
-          }
-          let classnames = /( ERROR | INFO | WARNING | DEBUG | CRITICAL )/g.test(
-            logline
-          )
-            ? "logline "
-            : "";
-          classnames += logline.includes(" ERROR ")
-            ? "error"
-            : logline.includes(" INFO ")
-            ? "info"
-            : logline.includes(" WARNING ")
-            ? "warning"
-            : logline.includes(" DEBUG ")
-            ? "debug"
-            : logline.includes(" CRITICAL ")
-            ? "critical"
-            : "";
+        ${this.log.split(/\r?\n/).map((logline) => {
+          if (logline.length === 0) return;
+          let classnames;
 
-          return html`
-            <span class="${classnames}">${logline}</span>
-          `;
+          if (/( INFO |^ I: )/.test(logline)) {
+            classnames += "logline info";
+          } else if (/( WARNING |^ W: )/.test(logline)) {
+            classnames += "logline warning";
+          } else if (/( ERROR |^ E: )/.test(logline)) {
+            classnames += "logline error";
+          } else if (/( CRITICAL |^ C: )/.test(logline)) {
+            classnames += "logline critical";
+          } else if (/( DEBUG |^ D: )/.test(logline)) {
+            classnames += "logline debug";
+          }
+
+          return html` <span class="${classnames || ""}">${logline}</span> `;
         })}
       </div>
     `;

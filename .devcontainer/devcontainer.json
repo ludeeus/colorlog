@@ -1,7 +1,7 @@
 // See https://aka.ms/vscode-remote/devcontainer.json for format details.
 {
   "name": "Colorlog Development",
-  "dockerFile": "Dockerfile",
+  "image": "ludeeus/container:frontend",
   "context": "..",
   "appPort": 5000,
   "postCreateCommand": "npm install",
